@@ -89,3 +89,12 @@ Finally, each category of our benchmark has different dependencies (see examples
 **DubinsRejoin Example:** `gcc <verifier_functions_implementation.c> ./properties/reinforcement_learning/dubinsrejoin/dubinsrejoin_13_safe.c ./networks/reinforcement_learning/dubinsrejoin.c`
 
 **LunarLander Example:** `gcc <verifier_functions_implementation.c> ./properties/reinforcement_learning/lunarlander/lunarlander_89_safe.c ./networks/reinforcement_learning/lunarlander.c`
+
+
+# Note on the Expanded Framework
+
+Polynomial Approximation Networks have been expanded to include more smaller size samples. The following additional folders are introduced:
+
+* **bin:** The original samples in build/export are fuzzed to produce an expanded dataset that is vulnerable. The mutation fuzzer of choice is [mull](https://github.com/mull-project/mull). Mull requires the samples to be compiled using clang. The compiled samples are placed in the bin directory.
+* **patches:** After running the built samples in bin the patches are generated and placed here.
+* **expanded:** The patches are applied to the original samples, and the expanded dataset is found here.
