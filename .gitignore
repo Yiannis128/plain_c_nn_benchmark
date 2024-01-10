@@ -5,3 +5,6 @@ bin
 includes/verifier_functions.h.gch
 Pipfile.lock
 sv-bench
+patches
+patched-src
+mull.yml
