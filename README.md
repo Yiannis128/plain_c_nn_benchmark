@@ -98,3 +98,5 @@ Polynomial Approximation Networks have been expanded to include more smaller siz
 * **bin:** The original samples in build/export are fuzzed to produce an expanded dataset that is vulnerable. The mutation fuzzer of choice is [mull](https://github.com/mull-project/mull). Mull requires the samples to be compiled using clang. The compiled samples are placed in the bin directory.
 * **patches:** After running the built samples in bin the patches are generated and placed here.
 * **expanded:** The patches are applied to the original samples, and the expanded dataset is found here.
+* **patched-src:** When the patches are transformed into full source code files, they are placed in this folder.
+* **patched-src-2:** Same as `patched-src` except the extra safety checking `assert` statements are removed.
